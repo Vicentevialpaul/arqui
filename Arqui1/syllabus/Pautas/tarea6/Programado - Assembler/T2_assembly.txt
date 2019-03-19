@@ -1,0 +1,4 @@
+MOV A,2
+MOV B,2
+ADD A,B
+MOV B,A

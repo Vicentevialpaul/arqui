@@ -1,0 +1,10 @@
+var1 255
+var2 0
+main: MOV A,(var1)
+MOV B,(var2)
+SUB A,1
+CMP A,B
+JNE main
+NOP
+ADD A,1
+MOV (var2),A

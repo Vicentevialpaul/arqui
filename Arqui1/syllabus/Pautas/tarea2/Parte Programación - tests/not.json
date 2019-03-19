@@ -1,0 +1,6 @@
+{
+  "circuit":[
+    {"from":"input1","to":"not1"},
+    {"from":"not1","to":"out1"}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "circuit":[
+    {"from":"input1","to":"and1"},
+    {"from":"input2","to":"and1"},
+    {"from":"and1","to":"out1"},
+    {"from":"input3","to":"xor1"},
+    {"from":"input4","to":"xor1"},
+    {"from":"xor1","to":"out2"}
+  ]
+}

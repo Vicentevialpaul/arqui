@@ -1,0 +1,16 @@
+DATA:
+minimo 	0	// debe ser 6! = 02D0
+maximo 	0	// debe ser 9! = 8980
+K 	4
+largo 	8
+lista 	1
+	12
+	2
+	3
+	21
+	6
+	9
+	20
+
+
+CODE:

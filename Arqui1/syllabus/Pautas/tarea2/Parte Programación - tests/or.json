@@ -1,0 +1,7 @@
+{
+  "circuit":[
+    {"from":"input1","to":"or1"},
+    {"from":"input2","to":"or1"},
+    {"from":"or1","to":"out1"}
+  ]
+}

@@ -1,0 +1,1 @@
+{"output": [{"from": "xor1", "to": "out1"}, {"from": "ffd1", "to": "xor1"}, {"from": "ffd2", "to": "xor1"}]}

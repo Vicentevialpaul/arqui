@@ -1,0 +1,19 @@
+DATA:
+ciclico	 0	// debe ser 1
+columnas 4	
+matriz	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	1

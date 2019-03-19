@@ -1,0 +1,211 @@
+DATA:
+var1 5
+var2 7
+var3 0
+var4 0
+
+avance 0
+
+CODE:
+
+MOV B,0 //0
+MOV A,(B)
+CMP A,5
+JNE error
+INC (avance)
+
+MOV B,(B) //1
+MOV A,B
+CMP A,5
+JNE error
+INC (avance)
+
+MOV B,2
+MOV A,6
+MOV (B),A //2
+MOV A,(B)
+CMP A,6
+JNE error
+INC (avance)
+
+MOV B,2
+MOV (B),6 //3
+MOV A,(B)
+CMP A,6
+JNE error
+INC (avance)
+
+MOV A,3
+MOV B,1
+ADD A,(B) //4
+CMP A,10
+JNE error
+INC (avance)
+
+MOV A,3
+MOV B,0
+ADD B,(B) // 5 (guarda A+Mem[B] en B)
+MOV A,B
+CMP A,8
+JNE error
+INC (avance)
+
+MOV B,0 
+MOV A,(var2)
+SUB A,(B) // 6 (guarda A-Mem[B] en A)
+CMP A,2
+JNE error
+INC (avance)
+
+MOV B,0
+MOV A,(var2)
+SUB B,(B) // 7 (guarda A-Mem[B] en B)
+MOV A,B
+CMP A,2
+JNE error
+INC (avance)
+
+MOV B,0
+MOV A,6
+AND A,(B) // 8 (guarda A and Mem[B] en A)
+CMP A,4
+JNE error
+INC (avance)
+
+MOV B,0
+MOV A,6
+AND B,(B) // 9 (guarda A and Mem[B] en B)
+MOV A,B
+CMP A,4
+JNE error
+INC (avance)
+
+MOV B,0
+MOV A,6
+OR A,(B) // A (guarda A or Mem[B] en A)
+CMP A,7
+JNE error
+INC (avance)
+
+MOV B,0
+MOV A,6
+OR B,(B) // b (guarda A or Mem[B] en B)
+MOV A,B
+CMP A,7
+JNE error
+INC (avance)
+
+MOV B,0
+MOV A,6
+XOR A,(B) // C (guarda A xor Mem[B] en A)
+CMP A,3
+JNE error
+INC (avance)
+
+MOV B,0
+MOV A,6
+XOR B,(B) // d (guarda A xor Mem[B] en B)
+MOV A,B
+CMP A,3
+JNE error
+INC (avance)
+
+MOV A,5
+MOV B,2
+NOT (B),A // E (guarda not A en Mem[B])
+MOV A,(var3)
+CMP A,65530
+JNE error
+INC (avance)
+
+MOV A,5
+MOV B,2
+SHL (B),A // F (guarda shift left A en Mem[B])
+SHL A
+CMP A,(B)
+JNE error
+INC (avance)
+
+MOV A,5
+MOV B,2
+SHR (B),A // 10 (guarda shift left A en Mem[B])
+SHR A
+CMP A,(B)
+JNE error
+INC (avance)
+
+MOV B,0
+INC (B) // 11 (incrementa Mem[B] en una unidad)
+MOV A,6
+CMP A,(B)
+JNE error
+INC (avance)
+
+in0:
+IN A,0 // 12 A = Input[Lit]
+NOP
+NOP
+NOP
+CMP A,7
+JNE in0
+INC (avance)
+
+in1:
+IN A,1 // 13 A = Input[Lit]
+NOP
+NOP
+NOP
+CMP A,7
+JNE in1
+INC (avance)
+
+in2:
+IN B,0 // 14 B = Input[Lit]
+MOV A,B
+NOP
+NOP
+NOP
+CMP A,7
+JNE in2
+INC (avance)
+
+in3:
+IN B,1 // 15 B = Input[Lit]
+MOV A,B
+NOP
+NOP
+NOP
+CMP A,7
+JNE in3
+INC (avance)
+
+
+in4:
+IN (B),0 // 16 Mem[B] = Input[Lit]
+MOV A,(B)
+NOP
+NOP
+NOP
+CMP A,7
+JNE in4
+INC (avance)
+
+in5:
+IN (B),1 // 17 Mem[B] = Input[Lit]
+MOV A,(B)
+NOP
+NOP
+NOP
+CMP A,7
+JNE in5
+JMP fin
+
+error:
+MOV A,(avance)
+MOV B,255
+JMP error
+
+fin:
+MOV A,17
+MOV B,17
+JMP fin

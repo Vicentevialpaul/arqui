@@ -1,0 +1,29 @@
+{
+ " sequential ": [
+ {" from ":" input 1", " to ":" or1"},
+ {" from ":" input 2", " to ":" or2"},
+ {" from ":" or1", " to ":" not1"},
+ {" from ":" not1", " to ":" or1"},
+ {" from ":" not1", " to ":" xor1"},
+ {" from ":" xor1", " to ":" or2"},
+ {" from ":" or2", " to ":" xor1"},
+  {" from ":" xor1", " to ":" out1"},
+ {" from ":" xor1", " to ":" not2"},
+  {" from ":" not2", " to ":"ffd1"},
+   {" from ":" ffd1", " to ":"ffd2"},
+   {" from ":" ffd2", " to ":"out2"},
+  {" from ":"input3", " to ":"ffd1"},
+  {" from ":"input3", " to ":"ffd2"}
+
+ ],
+ " delays ": [
+ {" gate ":" or1", " delay ":4.1},
+ {" gate ":" not1", " delay ":0.1},
+  {" gate ":" not2", " delay ": 5},
+ {" gate ":" xor1", " delay ":10.0},
+ {" gate ":" or2", " delay ":4.5},
+  {" gate ":" ffd1", " delay ":4.5},
+  {" gate ":" ffd2", " delay ":4.5}
+
+ ]
+ }

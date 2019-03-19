@@ -1,0 +1,7 @@
+DATA:
+ciclico	 0	// debe ser 0
+columnas 2	
+matriz	0
+	1
+	0
+	0

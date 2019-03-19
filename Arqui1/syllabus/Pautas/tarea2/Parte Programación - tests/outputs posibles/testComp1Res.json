@@ -1,0 +1,80 @@
+{
+  "circuit": [
+    {
+      "from": "input1",
+      "to": "nand1"
+    },
+    {
+      "from": "input1",
+      "to": "nand3"
+    },
+    {
+      "from": "input1",
+      "to": "nand3"
+    },
+    {
+      "from": "input2",
+      "to": "nand4"
+    },
+    {
+      "from": "input2",
+      "to": "nand4"
+    },
+    {
+      "from": "input3",
+      "to": "nand5"
+    },
+    {
+      "from": "nand1",
+      "to": "nand2"
+    },
+    {
+      "from": "nand1",
+      "to": "nand2"
+    },
+    {
+      "from": "nand2",
+      "to": "nand7"
+    },
+    {
+      "from": "nand2",
+      "to": "nand7"
+    },
+    {
+      "from": "nand3",
+      "to": "nand5"
+    },
+    {
+      "from": "nand4",
+      "to": "nand1"
+    },
+    {
+      "from": "nand5",
+      "to": "nand6"
+    },
+    {
+      "from": "nand5",
+      "to": "nand6"
+    },
+    {
+      "from": "nand6",
+      "to": "nand8"
+    },
+    {
+      "from": "nand6",
+      "to": "nand8"
+    },
+    {
+      "from": "nand7",
+      "to": "nand9"
+    },
+    {
+      "from": "nand8",
+      "to": "nand9"
+    },
+    {
+      "from": "nand9",
+      "to": "out1"
+    }
+  ]
+}

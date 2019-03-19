@@ -1,0 +1,40 @@
+{
+    "combinational": [
+        {
+            "from": "xor1",
+            "to": "or2"
+        },
+        {
+            "from": "input2",
+            "to": "and1"
+        },
+        {
+            "from": "or1",
+            "to": "xor1"
+        },
+        {
+            "from": "input3",
+            "to": "or1"
+        },
+        {
+            "from": "or2",
+            "to": "out1"
+        },
+        {
+            "from": "input1",
+            "to": "and1"
+        },
+        {
+            "from": "input4",
+            "to": "or1"
+        },
+        {
+            "from": "input4",
+            "to": "or2"
+        },
+        {
+            "from": "and1",
+            "to": "xor1"
+        }
+    ]
+}

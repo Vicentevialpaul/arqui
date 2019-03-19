@@ -1,0 +1,11 @@
+MOV A,(var1)
+
+MOV B,(var2)
+
+ADD A,B
+
+NOP
+
+var1 14
+
+var2 14

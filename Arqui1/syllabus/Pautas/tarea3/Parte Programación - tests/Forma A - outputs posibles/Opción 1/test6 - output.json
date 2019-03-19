@@ -1,0 +1,12 @@
+{
+  "output": [
+    {
+      "from": "or1",
+      "to": "out2"
+    },
+    {
+      "from": "ffd1",
+      "to": "out1"
+    }
+  ]
+}

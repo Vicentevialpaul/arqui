@@ -1,0 +1,56 @@
+{
+  "combinational": [
+    {
+      "from": "input1",
+      "to": "not_1"
+    },
+    {
+      "from": "input1",
+      "to": "and2_1"
+    },
+    {
+      "from": "not_1",
+      "to": "and1_1"
+    },
+    {
+      "from": "Q0_1",
+      "to": "and1_1"
+    },
+    {
+      "from": "input2",
+      "to": "or1"
+    },
+    {
+      "from": "input3",
+      "to": "or1"
+    },
+    {
+      "from": "or1",
+      "to": "not1"
+    },
+    {
+      "from": "not1",
+      "to": "and2_1"
+    },
+    {
+      "from": "and2_1",
+      "to": "or_1"
+    },
+    {
+      "from": "and1_1",
+      "to": "or_1"
+    },
+    {
+      "from": "out_1",
+      "to": "out1"
+    },
+    {
+      "from": "or_1",
+      "to": "out_1"
+    },
+    {
+      "from": "or1",
+      "to": "out2"
+    }
+  ]
+}

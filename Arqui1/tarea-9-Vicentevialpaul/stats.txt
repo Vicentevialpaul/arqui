@@ -1,0 +1,20 @@
+==== ACTIONS ====
+MOV B,(n)  |  None
+MOV A,(i)  |  None
+NOP  |  STALLING 
+ADD A,1  |  FORWARDING - MOV A,(i) - FORWARDING UNIT 1 
+JNE start  |  FORWARDING - ADD A,1 - FORWARDING UNIT 1 
+MOV A,5  |  None
+ADD A,B  |  FORWARDING - MOV A,5 - FORWARDING UNIT 1 
+MOV B,3  |  FLUSHING -MOV A,5 , ADD A,B , MOV B,3 
+ADD A,1  |  None
+JNE start  |  FORWARDING - ADD A,1 - FORWARDING UNIT 1 
+MOV A,5  |  None
+ADD A,B  |  FORWARDING - MOV A,5 - FORWARDING UNIT 1 
+MOV B,3  |  None
+==== STATS ====
+cycles : 17
+forwarding unit 1: 5
+forwarding unit 2: 0
+stalling: 1
+flushing : 1

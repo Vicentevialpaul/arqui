@@ -1,0 +1,13 @@
+;Este es un programa de ejemplo
+
+;Literalmente suma 2 + 2
+
+MOV A,2
+
+MOV B,2
+
+ADD A,B
+
+MOV B,A
+
+;Deberían verse los dos registros iguales

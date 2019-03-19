@@ -1,0 +1,27 @@
+{
+  "circuit": [
+    {"from":"input1","to":"and1"},
+    {"from":"input1","to":"not1"},
+    {"from":"input1","to":"and3"},
+    {"from":"input1","to":"and4"},
+    {"from":"input2","to":"or1"},
+    {"from":"input2","to":"not2"},
+    {"from":"input3","to":"and4"},
+    {"from":"input3","to":"not3"},
+    {"from":"input3","to":"or3"},
+    {"from":"not1","to":"and2"},
+    {"from":"not2","to":"or1"},
+    {"from":"not2","to":"and2"},
+    {"from":"not3","to":"and3"},
+    {"from":"and2","to":"and1"},
+    {"from":"and3","to":"and5"},
+    {"from":"and4","to":"or2"},
+    {"from":"and1","to":"and6"},
+    {"from":"or1","to":"and5"},
+    {"from":"and5","to":"or2"},
+    {"from":"or2","to":"and6"},
+    {"from":"and6","to":"or3"},
+    {"from":"or3","to":"out1"}
+
+  ]
+}

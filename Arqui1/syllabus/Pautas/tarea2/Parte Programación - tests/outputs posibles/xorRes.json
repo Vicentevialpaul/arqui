@@ -1,0 +1,40 @@
+{
+  "circuit": [
+    {
+      "from": "input1",
+      "to": "nand1"
+    },
+    {
+      "from": "input1",
+      "to": "nand2"
+    },
+    {
+      "from": "input2",
+      "to": "nand1"
+    },
+    {
+      "from": "input2",
+      "to": "nand3"
+    },
+    {
+      "from": "nand1",
+      "to": "nand2"
+    },
+    {
+      "from": "nand1",
+      "to": "nand3"
+    },
+    {
+      "from": "nand2",
+      "to": "nand4"
+    },
+    {
+      "from": "nand3",
+      "to": "nand4"
+    },
+    {
+      "from": "nand4",
+      "to": "out1"
+    }
+  ]
+}

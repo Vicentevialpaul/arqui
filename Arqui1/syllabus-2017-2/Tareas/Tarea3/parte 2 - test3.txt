@@ -1,0 +1,31 @@
+DATA:
+ciclico	 0	// debe ser 0
+columnas 5	
+matriz	0
+	1
+	0
+	0
+	0
+	0
+	0
+	1
+	0
+	0
+	0
+	0
+	0
+	1
+	0
+	0
+	0
+	0
+	0
+	1
+	0
+	0
+	0
+	0
+	0
+
+
+CODE:

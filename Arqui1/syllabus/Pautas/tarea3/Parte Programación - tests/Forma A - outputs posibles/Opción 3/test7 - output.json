@@ -1,0 +1,180 @@
+{
+    "combinational": [
+        {
+            "from": "input3",
+            "to": "nand9"
+        },
+        {
+            "from": "input3",
+            "to": "nand10"
+        },
+        {
+            "from": "input5",
+            "to": "nand13"
+        },
+        {
+            "from": "input5",
+            "to": "nand14"
+        },
+        {
+            "from": "input8",
+            "to": "nand5"
+        },
+        {
+            "from": "input8",
+            "to": "nand6"
+        },
+        {
+            "from": "input2",
+            "to": "nand1"
+        },
+        {
+            "from": "input2",
+            "to": "nand2"
+        },
+        {
+            "from": "input2",
+            "to": "nand9"
+        },
+        {
+            "from": "input2",
+            "to": "not4"
+        },
+        {
+            "from": "input1",
+            "to": "nand1"
+        },
+        {
+            "from": "input1",
+            "to": "not2"
+        },
+        {
+            "from": "input4",
+            "to": "nand13"
+        },
+        {
+            "from": "input4",
+            "to": "not5"
+        },
+        {
+            "from": "or1",
+            "to": "not1"
+        },
+        {
+            "from": "not1",
+            "to": "out3"
+        },
+        {
+            "from": "and1",
+            "to": "or1"
+        },
+        {
+            "from": "input6",
+            "to": "and1"
+        },
+        {
+            "from": "input7",
+            "to": "nand5"
+        },
+        {
+            "from": "input7",
+            "to": "not3"
+        },
+        {
+            "from": "nand1",
+            "to": "nand3"
+        },
+        {
+            "from": "nand2",
+            "to": "nand4"
+        },
+        {
+            "from": "nand3",
+            "to": "out1"
+        },
+        {
+            "from": "nand4",
+            "to": "nand3"
+        },
+        {
+            "from": "not2",
+            "to": "nand2"
+        },
+        {
+            "from": "Q1",
+            "to": "nand4"
+        },
+        {
+            "from": "nand5",
+            "to": "nand7"
+        },
+        {
+            "from": "nand6",
+            "to": "nand8"
+        },
+        {
+            "from": "nand7",
+            "to": "or1"
+        },
+        {
+            "from": "nand8",
+            "to": "nand7"
+        },
+        {
+            "from": "not3",
+            "to": "nand6"
+        },
+        {
+            "from": "Q4",
+            "to": "nand8"
+        },
+        {
+            "from": "nand9",
+            "to": "nand11"
+        },
+        {
+            "from": "nand10",
+            "to": "nand12"
+        },
+        {
+            "from": "nand11",
+            "to": "out2"
+        },
+        {
+            "from": "nand12",
+            "to": "nand11"
+        },
+        {
+            "from": "not4",
+            "to": "nand10"
+        },
+        {
+            "from": "Q2",
+            "to": "nand12"
+        },
+        {
+            "from": "nand13",
+            "to": "nand15"
+        },
+        {
+            "from": "nand14",
+            "to": "nand16"
+        },
+        {
+            "from": "nand15",
+            "to": "and1"
+        },
+        {
+            "from": "nand16",
+            "to": "nand15"
+        },
+        {
+            "from": "not5",
+            "to": "nand14"
+        },
+        {
+            "from": "Q3",
+            "to": "nand16"
+        }
+    ]
+}

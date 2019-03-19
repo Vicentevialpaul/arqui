@@ -1,0 +1,7 @@
+;Se agrega 3 y luego 5 al stack . Con ADD se suman los valores del tope : 3+5 = 8.
+PUSH 3
+PUSH 5
+;Se agrega 3 y luego 5 al stack . Con ADD se suman los valores del tope : 3+5 = 8.
+ADD
+PUSH 3
+ADD

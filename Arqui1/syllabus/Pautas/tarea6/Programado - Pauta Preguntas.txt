@@ -1,0 +1,12 @@
+Parte 4 - Preguntas:
+
+A partir de sus resultados en las partes anteriores, deberá ejecutar los archivos de input disponibles en el Syllabus del curso y contestar las siguientes preguntas:
+
+Pregunta 1. ¿Existen diferencias entre el código Assembly original y el generado por el Disassembler? ¿Cuáles? ¿Cómo y por qué se genera cada una de ellas?
+	R: Una respuesta correcta debe mencionar que sí hay diferencias. Ente ellas están: pérdida de comentarios, labels y nombres de variables. De esas, la más importante es que en algunos casos no se puede reconocer si algo es una variable o no (como en el test 4). Deben mencionar un caso en que esto suceda en los tests. Deben indicar la causa de cada una de estas y para la última, deben mencionar que tiene relación con que el binario se interpretará como opcode, literal, opcode, etc...
+
+	Dependiendo de la interpretación de cada estudiante, puede ser que consideren que usando la información de instrucciones como MOV A, (Dir) pueden obtener información sobre las variables y que sólo el caso del test 4 tiene el problema de interpretación. Si no lo consideraron, deben hablar de ello en relación a los test 1 y 3.
+
+Pregunta 2. Explique qué sucede al ejecutar en su simulador el código binario generado por su Assembler a partir de los archivos de input disponibles en el Syllabus.
+	R: En esta respuesta se espera que especifiquen qué sucede en los ejemplos y porqué sucede. Una respuesta parcialmente correcta puede no entrar en detalles de los ejemplos pero sí debe mencionar que el simulador no tiene cómo saber si algo es una variable, por lo que lo interpreta como opcode o literal.
+

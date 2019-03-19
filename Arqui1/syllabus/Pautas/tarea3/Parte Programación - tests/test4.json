@@ -1,0 +1,14 @@
+{
+	"sequential":[
+		{"from": "input1", "to": "ffd1", "gate": "C"},
+		{"from": "input2", "to": "xor1"},
+		{"from": "ffd1", "gate": "Q", "to": "xor1"},
+		{"from": "xor1", "to": "ffd1", "gate": "D" },
+		{"from": "ffd1", "gate": "Q", "to": "out1"}
+	],
+
+	"input": {
+		"input1": [1,0,1,0,1,0,1],
+		"input2": [1,1,1,1,0,0,0]
+	}
+}

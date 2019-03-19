@@ -1,0 +1,96 @@
+{
+  "combinational": [
+    {
+      "from": "input1",
+      "to": "not_1"
+    },
+    {
+      "from": "input1",
+      "to": "and2_1"
+    },
+    {
+      "from": "not_1",
+      "to": "and1_1"
+    },
+    {
+      "from": "Q0_1",
+      "to": "and1_1"
+    },
+    {
+      "from": "input2",
+      "to": "not_2"
+    },
+    {
+      "from": "input2",
+      "to": "and2_2"
+    },
+    {
+      "from": "not_2",
+      "to": "and1_2"
+    },
+    {
+      "from": "Q0_2",
+      "to": "and1_2"
+    },
+    {
+      "from": "out_1",
+      "to": "not1"
+    },
+    {
+      "from": "or_1",
+      "to": "out_1"
+    },
+    {
+      "from": "not1",
+      "to": "and2_1"
+    },
+    {
+      "from": "and2_1",
+      "to": "or_1"
+    },
+    {
+      "from": "and1_1",
+      "to": "or_1"
+    },
+    {
+      "from": "out_1",
+      "to": "xor1"
+    },
+    {
+      "from": "or_1",
+      "to": "out_1"
+    },
+    {
+      "from": "out_2",
+      "to": "not2"
+    },
+    {
+      "from": "or_2",
+      "to": "out_2"
+    },
+    {
+      "from": "not2",
+      "to": "and2_2"
+    },
+    {
+      "from": "and2_2",
+      "to": "or_2"
+    },
+    {
+      "from": "and1_2",
+      "to": "or_2"
+    },
+    {
+      "from": "out_2",
+      "to": "xor1"
+    },
+    {
+      "from": "or_2",
+      "to": "out_2"
+    },
+    {
+      "from": "xor1",
+      "to": "out1"
+    }
+  ]
+}

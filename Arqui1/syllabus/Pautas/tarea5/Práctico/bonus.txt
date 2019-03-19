@@ -1,0 +1,47 @@
+PUSH 5
+PUSH 5
+SUB
+JEQ sig1
+JMP wrong
+sig1
+PUSH 16
+PUSH 5
+SUB
+JNE sig2
+JMP wrong
+sig2
+PUSH 10
+PUSH 5
+SUB
+JGT sig3
+JMP wrong
+sig3
+PUSH 2
+PUSH 5
+SUB
+JLT sig4
+JMP wrong
+sig4
+PUSH 5
+PUSH 5
+SUB
+JGE sig5
+JMP wrong
+sig5
+PUSH 5
+PUSH 5
+SUB
+JLE end
+JMP wrong
+end
+PUSH 10
+JMP end
+wrong
+push 255
+push 255
+push 255
+push 255
+push 255
+push 255
+
+

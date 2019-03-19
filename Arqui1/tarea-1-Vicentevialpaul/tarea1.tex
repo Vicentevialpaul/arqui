@@ -1,0 +1,157 @@
+\documentclass[letter]{article}
+
+\usepackage{MD_estilo}
+
+\nombre{Vicente Vial} % Aqui va el nombre del alumno
+\numtarea{1} % Aqui va el número de la tarea
+
+\sigla{IIC2343} % Aqui va la sigla del curso
+\curso{Arquitectura de Computadores} % Aqui va el nombre del curso
+\semestre{2} % Aqui va el semestre del curso
+\ano{2018} % Aqui va el año del curso
+
+
+\begin{document}
+	
+	\begin{pregunta}{1} % Aqui se coloca el número de la pregunta
+		a) Se tiene la siguiente ecuación $7_{\beta}+8_{\beta}=13_{\beta}\quad$ Para representar un número en representación posicional se utiliza la siguiente fórmula: $$número\quad=\quad\sum^{n-1}_{k=0}s_{k} \times \beta^{k}$$
+		Luego, se toma $\beta$ como una variable:
+		$$7\times\beta^{0}+8\times\beta^{0} = 1\times\beta^{1} + 3\times\beta^{0}$$ 
+		$$7+8=\beta + 3$$
+		$$\beta = 12$$
+		Luego base $\beta$ de la ecuación es 12
+
+	$$\quad$$
+	$$\quad$$
+		b) ¿Para qué números $\alpha\in R$, existe $\beta$, tal que $\alpha$ = $10\beta$? Indique una expresión analítica que caracterice $\beta$ en función de $\alpha$.
+		$$\quad$$
+		
+		Al igual que en el ejercicio anterior, los número se pueden representar de la siguiente forma: 
+		$$número\quad=\quad\sum^{n-1}_{k=0}s_{k} \times \beta^{k}$$
+		Luego, como se dijo en la issues, me voy a restringir solo a la bases positivas enteras. Luego si tomo $\alpha$ como un número, y $\beta$ como una base:
+		$$\alpha\quad=\quad\sum^{n-1}_{k=0}s_{k} \times \beta^{k}$$
+		luego se tiene que cumplir que $\alpha\quad=\quad10\beta$
+		Entonces:
+		$$\alpha\quad=\quad 1\times\beta^{1} + 0\times\beta^{0}$$
+		Y finalmente:
+		$$\alpha\quad=\quad\beta$$
+		Como dijimos anteriormente, nos restringiremos solo a las bases positivas enteras , y la base 0 no tiene sentido para representar un número, ya que sólo representaría al 0, por lo que:
+		$$\beta\geq 1 \quad \beta\in\ Z$$
+		Y por lo tanto, por lo deducido anteriormente,  para $$\alpha\geq 1 \quad \alpha\in\ Z$$ existe  $\beta$, tal que $\alpha$ = $10\beta$
+		
+		$$\quad$$
+		$$\quad$$
+
+
+		c)Extienda el análisis del ítem anterior, considerando esta vez $\alpha\quad=\quad 10_{\beta}^{\gamma}$
+. Indique las expresiones analíticas relevantes para caracterizar $\beta$ y $\gamma$.
+$$\quad$$
+
+Ahora, se tendrá que, $10^{\gamma}$ representa un número que tiene un 1 en la $\gamma$ posición, y en cualquier otra posición se tendrá 0, esto si contamos la posición 0 como el dígito de más a la derecha , y se va contando hacia la izquierda. Es decir usando la misma nomenclatura que la representación de número anterior, donde el número se representa de la siguiente manera:
+$$número\quad=\quad\sum^{n-1}_{k=0}s_{k} \times \beta^{k}$$
+Donde k sería la posición del número. Luego, como se tiene un 1 en la $\gamma$ posición, y 0 en todas las otras posiciones, se tendra que la sumatoria quedara de la siguiente manera:
+$$\alpha\quad=\quad 10_{\beta}^{\gamma}\quad=\quad1*\beta^{\gamma}+0*\beta^{\gamma-1}+...+0*\beta^{0}$$
+Y por lo tanto:
+$$  \alpha\quad=\quad 10_{\beta}^{\gamma}\quad=\quad\beta^{\gamma}  $$
+Sujeto a que como se dijo en la pregunta anterior:
+$$\beta\geq 1 \quad \beta\in\ Z$$
+Además de que $$\gamma >= 0 \quad \gamma\in Z$$
+
+		
+		
+	\end{pregunta}
+	
+	\begin{pregunta}{2}
+	a)Considere el conjunto numérico $K_{t}$ = $\{k \in N | k \leq t\}$. Considere además una representación posicional binaria de n bits para estos números. Si se desea ahora representar el conjunto $K^{*}_{t}$ = $\{k \in Z |\quad |k| \leq t}$, ¿cuántos bits necesita como mínimo la nueva representación posicional? Considere que la nueva representación debe ser algebraicamente consistente.
+	$$\quad$$
+	Supuesto(issues): n tiene al menos la cantidad de bits necesarios para representar t sin perder bits
+	
+	$$\quad$$
+	
+	Siguiendo el supuesto, se tiene que no se pierden bits, luego el número t vendrá dado por:
+	$$2^{n-1} \leq t \leq 2^{n}-1$$
+	 Esto ya que, como dice el supuesto,n bits representan a t sin perder bits, y por lo tanto el menor valor que puede tomar es $2^{n-1}$ ya que como no se pierden bits, este es el menor número que se puede representar con n bits(ya que no pueden haber 0 en la primera posición de izquierda a derecha y se parte de la cantidad 0). Es decir el menor número para representar n bits sin perder bits es: 10...0 (con n-1 0s).
+	 
+	
+	 Luego según la representación, este número sería:
+	 $$número\quad=\quad\sum^{n-1}_{k=0}s_{k} \times 2^{k}$$
+	 Y como todos los números son 0, a excepción del 1 de más a la izquierda:
+	 $$número\quad=\quad2^{n-1}$$
+	 
+	 
+	 
+	 Además el mayor valor que puede tomar t es $2^{n}-1$  que sería el mayor número que se puede representar con n bits. Ya que la mínima cantidad que se pueden representar con n+1 bits sin perder bits es $2^{n}$ . Entonces, al restarle 1, queda la máxima cantidad que se puede representar con n bits, que sería $2^{n} - 1$
+
+
+
+	Luego, la cantidad de elementos en el conjunto $K_{t}$ viene dada por el número t(ya que es el número más grande del conjunto, y todo los menores iguales a el son parte del conjunto) más el 0, es decir tiene t+1 elementos. Y para representar a los negativos se necesitan t elementos más,uno por cada positivo,  luego:
+	$$   2^{n-1} \leq t \leq 2^{n}-1  \quad /\times 2    $$
+	$$   2^{n} \leq 2t \leq 2^{n+1}-2     $$
+	Luego el conjunto tendrá 2t + 1(por el 0) elementos, y la cantidad del conjunto $K^{*}_{t}$ vendrá dada por:
+	$$   2^{n} +1\leq 2t + 1 \leq 2^{n+1}-1     $$
+	Luego se necesitan $n+1$ bits para representar  $2^{n}+1$ elementos del conjunto cuando t es igual a $2^{n-1}$(esto ya que la máxima cantidad que se puede representar con n bits es $2^{n} - 1$, y la máxima cantidad que se puede representar con n+1 bits es $ 2^{n+1} - 1$) y entonces  se necesitan como minimo $n+1$  bits para representar el conjunto $K^{*}_{t}$, que tendrá una cantidad de 2t +1 elementos.
+	
+	$$\quad$$
+	$$\quad$$
+	
+	b) Al utilizar complemento a 2 para representaciones posicionales binarias, se genera una representación no equilibrada, donde existen más elementos negativos que positivos. Modifique el algoritmo de transformación, tal que ahora existan más números positivos que negativos.
+	$$\quad$$
+	Cabe recalcar, que para hacer el complemento a 2 se necesitará agregar 1 bit.
+	La modificación del algoritmo es la siguiente:
+	    1) Se agrega un 1 a la izquierda del número, este será la representación del número positivo en complemento a 2.
+	    
+	    
+	    2)Se realiza el reemplazo de 0s y 1s
+	    
+	    
+	    3)le sumamos un 1 al número, este será el complemento de número positivo.
+	    
+	    
+	    Ejemplo: tenemos el número 01, que representa el número 1 positivo. 
+	    
+	    
+	    1) Se agrega un 1 a la izquierda, ahora el número está representado por 101 en complemento a 2.
+	    
+	    
+	    2) Se realiza el reemplazo de 0s y 1s, quedando el número 010.
+	    
+	    
+	    3) Se suma 1 al número, quedando 011, este será el complemento del número 1  representado como 101 en complemento a 2. Ahora si sumamos 101 + 011, nos da el resultado de 1000, lo que es correcto.
+	    
+	    
+	    Quedando un sistema consistente, donde los números positivos partirán con un 1 en la primera posición a la izquierda, y los negativos con un 0 en la primera posición a la izquierda.
+	    
+	    Ahora, la cantidad de números positivos es mayor que los negativos, ya que para la representación de número con n bits(si el 0 se considera ni negativo ni positivo) se tendrá $(2^{n}/2) - 1$ número negativos ya que ahora no incluirán al número 10...0 (con n-1 0s) por que parte en 1, y por lo tanto este número  será positivo al partir en 1, y los números positivos serán $(2^{n}/2) - 1 + 1$ = $2^{n}/2$.
+	Quedando una mayor cantidad de número positivos.
+	    
+	    
+
+	
+	
+	
+	
+	
+	
+	
+	
+	$$\quad$$
+	$$\quad$$
+	c)Caracterice el conjunto de bases de representaciones posicionales, tales que al aplicar su correspondiente complemento, se genere una representación equilibrada, con la misma cantidad de elementos positivos y negativos. Demuestre que este conjunto existe y es infinito.
+	$$\quad$$
+	Aclaración: Consideraré el 0 ni positivo ni negativo, y me restringiré a las bases positivas enteras como se dijo en las issues
+	$$\quad$$
+	El conjunto de bases que al aplicar el correspondiente complemento, se genera una representación equilibrada es el siguiente:
+	$$\{ \beta \in Z | \beta > 0 , \beta \% 2 \neq 0 \} $$
+	$\%$ es el módulo. Es decir, el conjunto viene dado por todos los $\beta$ mayores a 0, y que sean impares.
+	
+	La explicación es la siguiente, cuando se tiene un conjunto de base $\beta$ y se están ocupando n dígitos para representar los números mediante representación posicional con la base  $\beta$. Si es que no se ha aplicado complemento, entonces se pueden representar, $\beta^{n}$ números . Al aplicar complemento para representar los números que sumados a los actuales dan 0, se tiene que usar un dígito más, y por lo tanto, ahora se podrán representar $\beta^{n+1}$ números.
+	
+	Ahora si la base es par, entonces, sucede que  $\beta^{n+1}$ también sera par, y como el 0 no es positio ni negativo, entonces queda un cantidad impar $\beta^{n+1} - 1$ para repartir entre número positivos y negativos,ocasionando que la cantidad de números positivos y negativos sea distinta. 
+	
+	Si la base es impar,  entonces, sucede que  $\beta^{n+1}$ también sera impar, y como el 0 no es positivo ni negativo, entonces queda un cantidad par $\beta^{n+1} - 1$ para repartir entre número positivos y negativos, y como cada número positivo tiene su complemento negativo, se distribuye la cantidad par de elementos, en una mitad para los números positivos y en otra mitad para los números negativos.
+	$$\quad$$
+	
+	Ahora hay que demostrar que el conjunto existe, y es infinito, como se dijo en la issues, esto se puede demostrar con palabras, primero que nada el conjunto claramente es infinito ya que abarca todas la bases impares enteras mayores que 0, y el conjunto entero es infinito. Esto significa, que para cualquier número entero positivo, siempre habrá un número entero positivo impar más grande. Además independiente de lo grande que sea el número, siempre se cumplirá que  $\beta^{n}$ será impar con $\beta$ impar y n entero positivo(ya que es la cantidad de dígitos, y la cantidad tiene que ser entera y no puede ser negativa), y por lo tanto, como el 0 nunca será ni positivo ni negativo, siempre se tendrá una cantidad par de elementos para distribuir entre positivos y negativos, independiente de lo grande del número. Luego, al no tener límite hacia arriba los elementos del conjunto, y existir los elementos pares enteros positivos, se demuestra que el conjunto existe y es infinito.
+\end{pregunta}
+\end{document}
+

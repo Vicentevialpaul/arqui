@@ -1,0 +1,13 @@
+DATA:
+minimo 	0	// debe ser 8! = 9d80 
+maximo 	0	// debe ser 1! = 0001
+K 	8
+largo 	8	
+lista 	2
+	2	
+	1
+	2	
+	3
+	4
+	5
+	8 

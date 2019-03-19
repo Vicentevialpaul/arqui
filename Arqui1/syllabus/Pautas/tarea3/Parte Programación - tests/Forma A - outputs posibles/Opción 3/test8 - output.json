@@ -1,0 +1,8 @@
+{
+    "combinational": [
+        {
+            "from": "input1",
+            "to": "out1"
+        }
+    ]
+}

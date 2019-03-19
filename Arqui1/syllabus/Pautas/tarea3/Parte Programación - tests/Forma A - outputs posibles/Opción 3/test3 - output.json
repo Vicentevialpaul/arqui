@@ -1,0 +1,88 @@
+{
+    "combinational": [
+        {
+            "from": "input4",
+            "to": "nand5"
+        },
+        {
+            "from": "input4",
+            "to": "nand6"
+        },
+        {
+            "from": "and1",
+            "to": "out1"
+        },
+        {
+            "from": "input3",
+            "to": "nand5"
+        },
+        {
+            "from": "input3",
+            "to": "not1"
+        },
+        {
+            "from": "input2",
+            "to": "nand1"
+        },
+        {
+            "from": "input2",
+            "to": "nand2"
+        },
+        {
+            "from": "input1",
+            "to": "nand1"
+        },
+        {
+            "from": "input1",
+            "to": "not0"
+        },
+        {
+            "from": "nand1",
+            "to": "nand3"
+        },
+        {
+            "from": "nand2",
+            "to": "nand4"
+        },
+        {
+            "from": "nand3",
+            "to": "and1"
+        },
+        {
+            "from": "nand4",
+            "to": "nand3"
+        },
+        {
+            "from": "not0",
+            "to": "nand2"
+        },
+        {
+            "from": "Q1",
+            "to": "nand4"
+        },
+        {
+            "from": "nand5",
+            "to": "nand7"
+        },
+        {
+            "from": "nand6",
+            "to": "nand8"
+        },
+        {
+            "from": "nand7",
+            "to": "and1"
+        },
+        {
+            "from": "nand8",
+            "to": "nand7"
+        },
+        {
+            "from": "not1",
+            "to": "nand6"
+        },
+        {
+            "from": "Q2",
+            "to": "nand8"
+        }
+    ]
+}

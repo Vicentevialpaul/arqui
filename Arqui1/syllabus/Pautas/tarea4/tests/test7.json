@@ -1,0 +1,31 @@
+{
+  "sequential": [
+      {"from" : "input1", "to" : "not1"},
+      {"from" : "not1", "to" : "or1"},
+      {"from" : "input2", "to" : "or1"},
+      {"from" : "or1", "to" : "xor1"},
+      {"from" : "or1", "to" : "xor3"},
+      {"from" : "input2", "to" : "not3"},
+      {"from" : "not3", "to" : "xor2"},
+      {"from" : "input1", "to" : "xor2"},
+      {"from" : "xor2", "to" : "xor1"},
+      {"from" : "xor2", "to" : "xor3"},
+      {"from" : "xor1", "to" : "not2"},
+      {"from" : "xor1", "to" : "and1"},
+      {"from" : "xor3", "to" : "and1"},
+      {"from" : "not2", "to" : "or2"},
+      {"from" : "and1", "to" : "or2"},
+      {"from" : "or2", "to" : "out1"}
+  ],
+  "delays": [
+      {"gate" : "not1", "delay": 0.4},
+      {"gate" : "or1", "delay": 2.5},
+      {"gate" : "xor1", "delay": 7.0},
+      {"gate" : "not2", "delay": 2.1},
+      {"gate" : "or2", "delay": 1.0},
+      {"gate" : "not3", "delay": 0.3},
+      {"gate" : "xor2", "delay": 5.0},
+      {"gate" : "and1", "delay": 4.2},
+      {"gate" : "xor3", "delay": 3.5}
+  ]
+}

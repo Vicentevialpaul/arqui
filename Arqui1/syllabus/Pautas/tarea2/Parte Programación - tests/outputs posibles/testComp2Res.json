@@ -1,0 +1,200 @@
+{
+  "circuit": [
+    {
+      "from": "input1",
+      "to": "nand1"
+    },
+    {
+      "from": "input1",
+      "to": "nand3"
+    },
+    {
+      "from": "input1",
+      "to": "nand3"
+    },
+    {
+      "from": "input1",
+      "to": "nand4"
+    },
+    {
+      "from": "input1",
+      "to": "nand6"
+    },
+    {
+      "from": "input2",
+      "to": "nand11"
+    },
+    {
+      "from": "input2",
+      "to": "nand11"
+    },
+    {
+      "from": "input2",
+      "to": "nand8"
+    },
+    {
+      "from": "input2",
+      "to": "nand8"
+    },
+    {
+      "from": "input3",
+      "to": "nand12"
+    },
+    {
+      "from": "input3",
+      "to": "nand12"
+    },
+    {
+      "from": "input3",
+      "to": "nand13"
+    },
+    {
+      "from": "input3",
+      "to": "nand13"
+    },
+    {
+      "from": "input3",
+      "to": "nand6"
+    },
+    {
+      "from": "nand1",
+      "to": "nand2"
+    },
+    {
+      "from": "nand1",
+      "to": "nand2"
+    },
+    {
+      "from": "nand10",
+      "to": "nand18"
+    },
+    {
+      "from": "nand11",
+      "to": "nand16"
+    },
+    {
+      "from": "nand11",
+      "to": "nand9"
+    },
+    {
+      "from": "nand11",
+      "to": "nand9"
+    },
+    {
+      "from": "nand12",
+      "to": "nand4"
+    },
+    {
+      "from": "nand13",
+      "to": "nand15"
+    },
+    {
+      "from": "nand14",
+      "to": "nand15"
+    },
+    {
+      "from": "nand15",
+      "to": "out1"
+    },
+    {
+      "from": "nand16",
+      "to": "nand17"
+    },
+    {
+      "from": "nand16",
+      "to": "nand17"
+    },
+    {
+      "from": "nand17",
+      "to": "nand1"
+    },
+    {
+      "from": "nand18",
+      "to": "nand19"
+    },
+    {
+      "from": "nand18",
+      "to": "nand19"
+    },
+    {
+      "from": "nand19",
+      "to": "nand21"
+    },
+    {
+      "from": "nand19",
+      "to": "nand21"
+    },
+    {
+      "from": "nand2",
+      "to": "nand23"
+    },
+    {
+      "from": "nand20",
+      "to": "nand22"
+    },
+    {
+      "from": "nand21",
+      "to": "nand22"
+    },
+    {
+      "from": "nand22",
+      "to": "nand23"
+    },
+    {
+      "from": "nand23",
+      "to": "nand24"
+    },
+    {
+      "from": "nand23",
+      "to": "nand24"
+    },
+    {
+      "from": "nand24",
+      "to": "nand14"
+    },
+    {
+      "from": "nand24",
+      "to": "nand14"
+    },
+    {
+      "from": "nand3",
+      "to": "nand16"
+    },
+    {
+      "from": "nand4",
+      "to": "nand5"
+    },
+    {
+      "from": "nand4",
+      "to": "nand5"
+    },
+    {
+      "from": "nand5",
+      "to": "nand18"
+    },
+    {
+      "from": "nand6",
+      "to": "nand7"
+    },
+    {
+      "from": "nand6",
+      "to": "nand7"
+    },
+    {
+      "from": "nand7",
+      "to": "nand20"
+    },
+    {
+      "from": "nand7",
+      "to": "nand20"
+    },
+    {
+      "from": "nand8",
+      "to": "nand10"
+    },
+    {
+      "from": "nand9",
+      "to": "nand10"
+    }
+  ]
+}

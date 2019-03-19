@@ -1,0 +1,16 @@
+{
+  "circuit": [
+    {
+      "from": "input1",
+      "to": "nand1"
+    },
+    {
+      "from": "input1",
+      "to": "nand1"
+    },
+    {
+      "from": "nand1",
+      "to": "out1"
+    }
+  ]
+}

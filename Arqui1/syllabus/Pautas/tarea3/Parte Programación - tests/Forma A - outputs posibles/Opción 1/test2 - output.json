@@ -1,0 +1,12 @@
+{
+  "output": [
+    {
+      "from": "not1",
+      "to": "out1"
+    },
+    {
+      "from": "ffd1",
+      "to": "not1"
+    }
+  ]
+}

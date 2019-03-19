@@ -1,0 +1,16 @@
+{
+    "combinational": [
+        {
+            "from": "input2",
+            "to": "and1"
+        },
+        {
+            "from": "input1",
+            "to": "and1"
+        },
+        {
+            "from": "and1",
+            "to": "out1"
+        }
+    ]
+}
