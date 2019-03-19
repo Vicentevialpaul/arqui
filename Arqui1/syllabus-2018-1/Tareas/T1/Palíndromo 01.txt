@@ -1,0 +1,33 @@
+DATA:
+//HEAD
+letra  		0    // Respuesta es 0
+largo  		13
+palindromo 	"ANA LAVA LANE"
+//HEAD
+
+//Demás variables aquí
+
+CODE:
+// Escriba su algoritmo aquí.
+// Cuando termine haga JMP end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// No modificar lo de abajo
+end:
+//PRT (letra)
+

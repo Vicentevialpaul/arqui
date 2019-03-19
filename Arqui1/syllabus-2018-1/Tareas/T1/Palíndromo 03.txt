@@ -1,0 +1,32 @@
+DATA:
+//HEAD
+letra  		0    // Respuesta es 4
+largo  		16
+palindromo 	"YO HIGO YOGA HOY"
+//HEAD
+
+//Demás variables aquí
+
+CODE:
+// Escriba su algoritmo aquí.
+// Cuando termine haga JMP end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// No modificar lo de abajo
+end:
+//PRT (letra)

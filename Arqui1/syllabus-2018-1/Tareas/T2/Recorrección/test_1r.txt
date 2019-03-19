@@ -1,0 +1,23 @@
+PROGRAMA  1
+hit TLB:  2
+page fault:  7
+swap in:  7
+swap out:  5
+page valid:  6
+page disk:  4
+
+PROGRAMA  2
+hit TLB:  3
+page fault:  3
+swap in:  3
+swap out:  1
+page valid:  2
+page disk:  0
+
+PROGRAMA  3
+hit TLB:  2
+page fault:  3
+swap in:  3
+swap out:  3
+page valid:  3
+page disk:  3

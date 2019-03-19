@@ -1,0 +1,33 @@
+DATA:
+//HEAD
+letra  		0    // Respuesta es FFFF
+largo  		4
+palindromo 	"ROMA"
+//HEAD
+
+//Demás variables aquí
+
+CODE:
+// Escriba su algoritmo aquí.
+// Cuando termine haga JMP end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// No modificar lo de abajo
+end:
+//PRT (letra)
+

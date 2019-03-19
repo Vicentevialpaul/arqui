@@ -1,0 +1,40 @@
+DATA:
+//HEAD
+camino		0    // Respuesta es 3
+columnas	3
+matriz  	0
+	        0
+	        1
+        	0
+	        0
+	        0
+	        0
+	        1
+        	0
+//HEAD
+
+//Demás variables aquí
+
+CODE:
+// Escriba su algoritmo aquí.
+// Cuando termine haga JMP end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// No modificar lo de abajo
+end:
+//PRT (camino)

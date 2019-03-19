@@ -1,0 +1,35 @@
+DATA:
+//HEAD
+fin 10 		// largo del arreglo
+indice 0
+suma 0
+arreglo     	1
+		2
+		3
+		4
+		5
+		4
+		5
+		2
+		1
+		1
+//HEAD
+CODE:
+
+for:
+    MOV A, (indice) 	// Obtenemos posición en la que estamos
+    MOV B, (fin)      	// Obtenemos el largo de la lista
+    CMP A,B		// Comparamos A y B.
+    JGE end		// Si A >= B entonces ya terminamos de recorrer y saltamos a "end"
+    MOV A, arreglo	// Obtenemos la posición de memoria donde empieza la lista
+    ADD A, (indice)	// Nos desplazamos según el indice  (Posición arreglo + indice)
+    INC (indice)	// Aumentamos el indice en 1 para el siguiente recorrido
+    MOV B, A		// Movemos en B la posición del número que queremos obtener
+    MOV A, (B)		// Movemos en A el valor almacenado en la lista
+    ADD A, (suma)	// Hacemos que A = A + SUMA
+    MOV (suma),A	// Guardamos A en memoria
+JMP for 		// Saltamos de nuevo al for
+
+end:
+    MOV A,(suma)	// Movemos a A el valor final de la suma
+    //PRT A
