@@ -1,0 +1,135 @@
+		La Calidad en las Operaciones Herramientas y Medición
+• Visión moderna:
+	– “CALIDAD es la satisfacción del cliente, tanto interno como
+	externo”.
+	– “CALIDAD es adecuación al uso”.
+
+Administración Total de la Calidad (Total Quality Management,
+TQM) puede definirse como:
+	-“El manejo de la organización de manera que ésta sobresalga en todas las 		dimensiones de los productos y servicios que tengan importancia para el cliente”.
+	-El cliente es el que en definitiva decide qué es calidad.
+	-TQM se base en fundamentos filosóficos de administración y en herramientas 		genéricas de calidad.
+
+Elementos Filosóficos
+	1. Normas de calidad dirigidas por los clientes: “su producto no es confiable a 	menos que lo diga el cliente”, “su servicio no es rápido a menos que lo diga el 	cliente”.
+		Calidad de diseño.
+		Calidad de concordancia.
+	2. Enlaces proveedor-cliente: se refiere a la forma en que todos en la 			organización se relacionan con el cliente.
+	3. Orientación a la Prevención: “más vale prevenir que curar”.“Hacerlo bien la 		primera vez”. “No se puede inspeccionar la calidad”. “Cero defectos”
+	4. Costos de calidad: (a) costos de evaluación, (b) costos de prevención, (c) 		costos internos por averías, (d) costos externos por averías.”Es más barato la 		prevención”
+
+¿Cómo estimamos los costos?
+	• Usando información correcta de costos de operaciones
+		– (por ejemplo sobre ABC costing)…
+	• Y midiendo el impacto en el proceso…
+	5. Calidad en la Fuente: Cada trabajador es el inspector de calidad de su propio 	trabajo.
+	6. Mejora Continua: En un sentido amplio, es un esfuerzo continuo para aplicar 		mejorar en cada parte de la organización
+	a lo que se entrega a los clientes.
+El círculo del “mejoramiento continuo”
+                 <=	    Identificar Problemas   <=
+
+				Aprendizaje
+
+Identificar
+Causas Raíces			=>		Resolver Problemas
+
+CALIDAD ROBUSTA
+	• Dentro de las visiones de aseguramiento de calidad aparece la noción de “CERO 	DEFECTOS” (métodos Taguchi).
+	• El problema: las tolerancias.
+	• Concepto fundamental: la desviación con respecto al valor óptimo tiene un costo.
+		– Función de pérdida de calidad.
+• Indiferencia v/s costo: ?
+
+SIX SIGMA
+	• Six Sigma es una herramienta de gestión:
+		– Aumento de beneficios
+		– Simplifica procesos
+		– Mejora de la calidad
+		– Elimina errores
+	• Objetivos:
+		– Mejorar la satisfacción del cliente
+		– Reducir el tiempo del ciclo
+		– Reducir los defectos
+	• Orígenes: Motorola *
+	• El gran caso: GE *
+	• ¿En qué es diferente a TQM?
+	¿Qué es Six Sigma?
+	• Una estrategia para mejorar la calidad de procesos mediante la identificación y
+	eliminación de defectos y la minimización de la variación en los resultados del 	proceso
+	• Un enfoque determinado por datos basado en la medición de la variación de 		proceso utilizando control estadístico de proceso
+	• Un enfoque estructurado de implementación	basado en un ciclo DMAIC y 		expertos certificados
+	DEFECTOS:
+	• “Defecto” se define como cualquier resultado de proceso que no satisfaga las 		especificaciones del cliente.
+	• Mejorar la calidad significa reducir los defectos por millón de oportunidades 	(DPMO, por su sigla en inglés). Existen dos atributos de este criterio de medición 	que se pueden controlar:
+		– Oportunidades – reducir la cantidad de pasos, entregas y otras 			“oportunidades” ayuda a mejorar
+		la calidad
+		– Defectos – reducir la cantidad de defectos por cada etapa de proceso en 		un mejoramiento continuo de proceso ayuda a mejorar la calidad
+	DMAIC
+		– Define
+			• Quiénes son los clientes y cuáles son sus requerimientos
+			• Identifica las características claves importantes para el 				cliente
+		– Mide
+			• Categoriza los insumos claves y las características de los
+			  productos, verifica los sistemas de medición
+			• Recaba datos y fija un desempeño de línea de base
+		– Analiza
+			• Convierte datos crudos en información para entender el proceso
+		– Mejora
+			• Desarrolla soluciones para mejorar la capacidad del proceso y
+			compara los resultados con el desempeño de línea de base
+		– Controla
+			• Monitorea el proceso para garantizar que no se produzcan cambios 			inesperados
+Calidad en el sector de servicios
+
+	• El modelo de “brechas”.
+	• Trata de reflejar las percepciones subjetivas de los clientes.
+		– Expectativas de los clientes v/s expectativas de los empresarios
+	• Factores críticos en servicios:
+		– Menor capacidad de “recuperación” en caso de fallas.
+		– Entender correctamente las brechas y cuáles son las etapas de procesos 		que tienen impacto en ellas.
+		– Posteriormente, poner en práctica los mejoramientos para cerrar las 			brechas.
+		– Uso eficiente de las tecnologías de información para apoyar una buena 		gestión de los clientes y el servicio.
+		– Ejemplo: un Call-Center.
+
+Herramientas del Departamento de Control de Calidad
+	Es el encargado de la calidad en todo el proceso productivo. Su trabajo técnico 	(además de administrativo) se realiza a través del Control Estadístico de la 		Calidad, en dos clases:
+		a) Muestreo de aceptación: implica verificar una muestra aleatoria de 			bienes existentes y decidir si debe aceptarse todo un lote, con base en la 		calidad de la muestra aleatoria.
+		• El control estadístico de procesos se basa en la toma de 				muestras.
+		• Se requiere conocer el número de unidades en la muestra (n) y
+		el número máximo de aceptación (c).
+		• Para ello es necesario fijar políticas de la empresa:
+		– AQL Nivel de Calidad Aceptable. % de defectos max.
+		Productor.→AOQL. Acceptable Outgoing.
+		– RQL o LPTD % de tolerancia de defectos por lote. Consumidor.
+		–  : P() rechazar lote bueno. Riesgo Productor.
+		– : P() aceptar lote defectuoso. Riesgo Consumidor.
+		
+		AQL
+			• El AQL es el peor nivel de calidad aceptable (porcentaje
+			de falla) que el proceso puede tolerar.
+			• Proceso:
+				– El proveedor entrega en lotes
+				– El lote se comporta uniformemente
+				– El proveedor intenta no generar defectos.
+		b) Control de Procesos: comprende la verificación de una muestra aleatoria 		de salidas de un proceso para determinar si éste produce artículos con 			unas características dentro de un rango aceptable (tolerancia).
+
+		Riesgo Prod.– Probabilidad de rechazar un lote “bueno”.
+		Riesgo Consumidor– Probabilidad de aceptar un lote “malo”.
+
+
+Control de Procesos
+	• Se basa en los gráficos de control.
+	• Elaboración gráficos de control:
+		– La estadística recomienda tomar 25 muestras. No es una regla.
+	• Tamaño muestra > 25 unidades.
+		– Se utiliza el promedio y desviación standard. Con una
+		distribución normal.
+• Tamaño muestra < 25 unidades. Se debe ocupar los gráficos de X y R.
+		– Se obtiene la media de cada muestra. X
+		– Se obtiene el recorrido. Diferencia entre el máximo y el mínimo. R.
+		– Se obtiene el promedio de las muestras. X
+		– Se obtiene el promedio de los recorridos. R
+	• Se obtienen valores de A2, D4 y D3 de la tabla de límites de control.
+	• Se calculan los límites :
+DEFINICIONES:
+Transcript of METODO TAGUCHI: Consiste en una estrategia de experimentación durante la etapa de diseño mediante la que se determinan los niveles de los factores de diseño que permiten obtener productos con la menor variabilidad posible y con sus características de calidad lo más cercanas al valor nominal deseado.

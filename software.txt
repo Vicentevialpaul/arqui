@@ -1,0 +1,40 @@
+Atributos Tabla:
+
+Usuario: Id_usuario(llave principal) int, Nombre str, Correo str, Reputación int, Imagen png, Suscripciones list, Publicaciones Favoritas list
+Moderador: Hereda los atributos y métodos de Usuario, además tiene atributos id_foro(donde se es moderador) int, Publicaciones eliminadas list, Comentarios eliminados list.(llave principal(id_usuario, id_foro)
+Administrador: Hereda los atributos y métodos de Usuario. Además tiene atributos: foros creados list, foros editados list, foros moderados list, foros eliminados list.(llave principal(id_usuario))
+Foro: id_foro int (llave principal), nombre str, tema str, descripción str, número suscritores int
+Publicación: id_publicación(llave principal), título str, autor str, fecha_creación date, foro perteneciente(id_foro referente a Foro) int, tipo_publicación str, puntaje reputación(int)
+Encuesta: Hereda los atributos y métodos de Publicación, además, cuenta con los atributos: número de preguntas int, preguntas list, resultados_parciales list(lista de resultados para cada pregunta), se mantiene llave principal de id_publicación
+Texto:Hereda los atributos y métodos de Publicación, además, cuenta con los atributos: 
+contenido texto str, largo texto int, se mantiene llave principal de id_publicación.
+Imagen: Hereda los atributos y métodos de Publicación, además, cuenta con los atributos: 
+Imagen png, dimensiones imagen int. Se mantiene llave principal id_publicación.
+Enlace: Hereda los atributos y métodos de Publicación, además, cuenta con los atributos: 
+enlace str, largo enlace int, se mantiene llave principal id_publicación.
+
+
+
+Comandos Crud:
+     1) Generar Modelo: docker-compose run web rails g model Artist(nombre tabla) name:string (atributos). Esto crea una migración en db->migrate, las migraciones simplifican el manejo de datos, ya que contienen el Nombre y los atributos de las tablas creadas.
+    2) Correr migraciones: docker-compose run web rails db:create
+                           docker-compose run web rails db:migrate (indica que se ha creado la tabla)
+			   docker-compose run web rails db:migrate:status (indica el estado de las tablas que sean creado)
+   3) Crear controlador : docker-compose run web rails controller Artist
+       Controlador hereda de ApplicationController. Acá se define los métodos en las acciones del controlador, aca se manejan las operaciones del CRUD sobre los artículos de la operación. Acá se define el índex, el show, el new, el create, el edit, update, delete, destroy. El controlador va mostrando en la página las distintas acciones a través de las vistas(app->views), y también están las rutas (config->routes.rb) que determinan la información a través de vistas. Se tienen que editar el archivo routes.rb para que se generen las rutas, ej: poner en routes.rb resources :Artist..
+  
+             
+
+
+
+CRUD USUARIOS:
+Para el CRUD de usuarios. La idea es crear una tabla Usuario que contenga todos los usuarios, con los atributos mencionados anteriormente. En el controlador de esta tabla se podrán crear, leer, editar y eliminar los usuarios de la tabla. El usuario tendrá la opción en la página de realizar las acciones que se enuncian en el diagrama, y cuando ejecute alguna de estas acciones se modificará la base de datos en las tablas involucradas en la acción. Además el CRUD de usuarios tendrá tablas que hereden de usuarios. Estas son Moderador y Administrados, con sus respectivos atributos y métodos, y el CRUD efectuará las acciones dichas anteriormente sobre estos. Cambiar Enviar solicitud. El usuario se crea en la página en una vista donde el usuario pondrá sus datos y posteriormente en caso de éxito, se añadirá a la base de de datos, con los atributos respectivos.
+
+CRUD COMENTARIOS:
+    Tendrá una tabla COMENTARIOS,al igual que en el caso de Usuarios, tendrá los atributos mencionados anteriormente,  todos los métodos que pueda realizar que se enuncian en el diagrama, el CRUD los manejará para realizar las operaciones de datos en las tablas involucradas.
+
+CRUD PUBLICACIÓNES:
+   Este CRUD se cree igual que los anteriores, se diferencia en que hay 4 tablas que heredarán de Publicación, las que contendrán los mismos atributos de Publicación mas los atributos de cada tabla, y en el caso de Encuesta tendrá un método que influenciará en el CRUD de Usuarios.
+
+CRUD FOROS:
+ Foro se crea igual que los CRUD anteriores, podrá ser creado,editado,moderado y eliminado solo por un usuario administrador

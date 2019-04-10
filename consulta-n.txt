@@ -1,0 +1,61 @@
+Consultas: 
+1-
+ SELECT  transfiere.cuenta_banco_comprador, transfiere.cuenta_banco_vendedor, transferencia.cant_zorzales 
+FROM transfiere,transferencia 
+WHERE  (transfiere.cuenta_banco_comprador =  $numero_cuenta or transfiere.cuenta_banco_vendedor =  $numero_cuenta) and  transferencia.fecha = '$fecha'  and transfiere.id_trans = transferencia.id_trans ;
+
+2-
+  SELECT cant_peso_x_zorzal* $cantidad, cant_dolar_x_zorzal * $cantidad 
+  FROM PrecioHistorico
+  WHERE fecha = '$dia' ;
+
+3-SELECT t.id_trans,tra.cuenta_banco_comprador, tra.cuenta_banco_vendedor, t.cant_zorzales, t.fecha 
+ FROM Transferencia as t, transfiere as tra
+  WHERE  t.fecha in (SELECT max(t1.fecha)
+		     FROM Transferencia as t1, transfiere as tr
+		     WHERE tr.id_trans = t1.id_trans and 
+    		    (tr.cuenta_banco_comprador =  $numero_cuenta or 		 			     tr.cuenta_banco_vendedor =  $numero_cuenta))
+	 AND
+    	 t.id_trans = tra.id_trans and 
+        (tra.cuenta_banco_comprador =  $numero_cuenta or tra.cuenta_banco_vendedor =   		 $numero_cuenta) ;
+
+4- SELECT * FROM Usuario WHERE country = '$pais_procedencia’;
+
+5 -SELECT AVG(cant_peso_x_zorzal), AVG(cant_dolar_x_zorzal) FROM PrecioHistorico WHERE fecha >= '01 Dec 2000' and fecha <= '31 Dec 2000’;
+
+6-
+   Q1 = SELECT tr.fecha, count(*) 
+	FROM Transferencia as tr group by tr.fecha  
+	Having tr.fecha >= '05 Dec 2000' and tr.fecha <= '24 Dec 2000'
+               and count(*) = (SELECT max(q.c) FROM (SELECT t.fecha , count(*) as c 
+						     FROM Transferencia as t group by t.fecha
+						     Having t.fecha >= '05 Dec 2000' and t.fecha <= '24 Dec 2000') as q);" ;
+
+    Q2 = SELECT tr.fecha, sum(tr.cant_zorzales)
+         FROM Transferencia as tr group by tr.fecha 
+         Having tr.fecha >= '05 Dec 2000' and tr.fecha <= '24 Dec 2000'
+                and sum(tr.cant_zorzales) = (SELECT max(q.c)
+					     FROM (SELECT t.fecha , sum(t.cant_zorzales) as c
+						   FROM Transferencia as t group by t.fecha  
+						   Having t.fecha >= '01 Dec 2000' and t.fecha <= '31 Dec 2000') as q);" 
+
+7 - 
+	SELECT (total_in – total_out)
+	FROM (
+	SELECT SUM(cantidad_zorzales) AS total_in
+	FROM(
+	SELECT cantidad_zorzales
+	FROM Exchange, Realiza_a_un
+	WHERE Exchange.id_exchange = Realiza_a_un.id_exchange AND Realiza_a_un.cuenta_banco_comprador = %usuario%), (
+	SELECT cantidad_zorzales
+	FROM Transferencia, Transfiere
+	WHERE Transferencia.id_trans = Transfiere.id_trans AND Transfiere.cuenta_banco_comprador = %usuario%)), (
+	SELECT SUM(cantidad_zorzales) AS total_out
+	FROM(
+	SELECT cantidad_zorzales
+	FROM Exchange, Realiza_a_un
+	WHERE Exchange.id_exchange = Realiza_a_un.id_exchange AND Realiza_a_un.cuenta_banco_vendedor = %usuario%), (
+	SELECT cantidad_zorzales
+	FROM Transferencia, Transfiere
+	WHERE Transferencia.id_trans = Transfiere.id_trans AND Transfiere.cuenta_banco_vendedor = %usuario%))
+

@@ -1,0 +1,24 @@
+CREATE OR REPLACE FUNCTION
+trazabilidad(id integer)
+RETURNS  TABLE (id_nuevo integer) AS $$
+DECLARE
+origen integer;
+tupla record;
+
+BEGIN
+	RETURN QUERY 
+	WITH RECURSIVE Alcanzo(comprador) AS (
+		SELECT  tr.cuenta_banco_comprador cuenta FROM transfiere tr WHERE tr.cuenta_banco_vendedor = id
+		UNION
+		SELECT t.cuenta_banco_comprador FROM transfiere t, Alcanzo A WHERE t.cuenta_banco_vendedor = A.comprador)
+
+		Select DISTINCT comprador from Alcanzo where comprador <> id;
+	RETURN;
+END
+$$ language plpgsql
+
+
+
+
+
+

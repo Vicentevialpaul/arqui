@@ -1,0 +1,53 @@
+CREATE OR REPLACE FUNCTION
+datos()
+RETURNS TABLE (id varchar(20),cantidad integer) AS $$
+DECLARE
+suma integer;
+suma1 integer;
+suma2 integer;
+suma3 integer;
+suma4 integer;
+final integer;
+numero_cuenta integer;
+tupla record;
+BEGIN
+	CREATE TABLE saldos(id varchar(20) ,cantidad integer);
+	FOR numero_cuenta in SELECT cuenta_banco FROM usuario LOOP
+		SELECT sum(e.cantidad_zorzales) INTO suma1 from Exchange as e, realiza_exchange as r  where e.id_exchange = r.id_exchange and r.cuenta_banco_comprador = numero_cuenta;
+		SELECT sum(t.cant_zorzales) INTO suma2 from Transferencia as t, transfiere as tr where t.id_trans = tr.id_trans 
+	  and tr.cuenta_banco_comprador = numero_cuenta;
+	  	SELECT sum(t.cant_zorzales) INTO suma3 from Transferencia as t, transfiere as tr where t.id_trans = tr.id_trans 
+	  and tr.cuenta_banco_vendedor = numero_cuenta;
+		SELECT sum(e.cantidad_zorzales) INTO suma4 from Exchange as e, realiza_exchange as r where e.id_exchange = r.id_exchange and r.cuenta_banco_vendedor = numero_cuenta;
+		IF suma1 IS NULL THEN 
+			suma1 = 0;
+		END IF;
+		IF suma2 IS NULL  THEN 
+			suma2 = 0;
+		END IF;	  
+		IF suma3 IS NULL THEN 
+			suma3 = 0;
+		END IF;	  
+		IF suma4 IS NULL THEN 
+			suma4 = 0;
+		END IF;	    
+	    final = suma1 + suma2 - suma3 - suma4;
+	    IF final < 0 THEN
+	    	final = 0;
+	    END IF;
+	    INSERT INTO saldos VALUES (numero_cuenta,final);
+	END LOOP;
+	FOR tupla in Select * from cuenta LOOP
+		INSERT INTO saldos VALUES (tupla.id_cuenta,tupla.estado_cuenta);
+	END LOOP;
+	RETURN QUERY Select * from saldos;
+	DROP TABLE saldos;
+	RETURN;
+END
+$$ language plpgsql
+
+
+
+
+ 
+ 

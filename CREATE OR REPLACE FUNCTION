@@ -1,0 +1,18 @@
+CREATE OR REPLACE FUNCTION
+depositado()
+RETURNS integer AS $$
+DECLARE
+suma integer;
+suma1 integer;
+suma2 integer;
+suma3 integer;
+final integer;
+BEGIN
+SELECT sum(cant_zorzales) INTO suma FROM Transferencia Where fecha >= '01 Apr 2017';
+SELECT sum(cantidad_zorzales) INTO suma1 FROM Exchange Where fecha >= '01 Apr 2017';
+SELECT sum(monto) INTO suma2 FROM transaccion56 Where fecha >= '01 Apr 2017';
+SELECT sum(e.monto) INTO suma3 FROM exchange56 as e Where e.fecha >= '01 Apr 2017';
+final = suma + suma1 + suma2 + suma3 ;
+RETURN final;
+END
+$$ language plpgsql

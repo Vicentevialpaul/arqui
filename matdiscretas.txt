@@ -1,0 +1,45 @@
+Función invectiva: (a,b) y (1,2,3) , (a,1),(b,2) , f^-1 = (1,a),(2,b) , no es función total.
+Demostración sobreeyectiva:
+
+f1 y f2 son sobre: 
+1)Para b perteneciente a B, existe un a pertencienciente a A, TAL QUE un f1(a) = b.
+2)Para todo c perteneciente a C, existe un b perteneciente a B, tal que f2(b) = c
+
+POD: 
+
+Para todo c peretenciente a C, existe un a perteneciente a A, TAL QUE f1 o f2(a) = C
+Sea c perteneciente a C
+POR 2) , EXISTE UN b perteneciente B, tq f2(b) = c
+Por 1), existe un a perteneciente a A, tq f1(a)=b
+Por def de comp, f1of2(a) = c.
+
+A     B        C
+
+F1of2, toma un elemento de A a C.
+F1 de A a B
+F2 de B a C.
+
+
+Inverso de cada implicación?
+
+
+   f1       f2
+a       1         A
+b       2         B
+        3
+
+( a,1) , (1,A) , (b,2) , (2,B), (3,B). No se cumple
+
+Ejemplo palomares:
+
+  Demostración:
+
+Se manda un ai a cada palomar, tienen que haber 2 ai juntos.,,
+
+a=60
+ = 2*2*15 = 2^2 *15, dividir numero hasta que no se pueda dividir por 2.
+F(ai) = m
+F(aj) = m
+Ai = 2^k1 * m
+aj= 2^k2 *m
+ 

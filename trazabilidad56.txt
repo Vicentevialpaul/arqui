@@ -1,0 +1,19 @@
+CREATE OR REPLACE FUNCTION
+trazabilidad56(id varchar)
+RETURNS  TABLE (id_nuevo varchar) AS $$
+DECLARE
+origen integer;
+tupla record;
+
+BEGIN
+	RETURN QUERY 
+	WITH RECURSIVE Alcanzo(comprador) AS (
+		SELECT  tr.id_receptor cuenta FROM transaccion56 tr WHERE tr.id_emisor = id
+		UNION
+		SELECT t.id_receptor FROM transaccion56 t, Alcanzo A WHERE t.id_emisor = A.comprador)
+
+		Select DISTINCT comprador from Alcanzo where comprador <> id;
+	RETURN;
+END
+$$ language plpgsql
+

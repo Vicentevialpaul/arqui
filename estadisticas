@@ -1,0 +1,134 @@
+CREATE OR REPLACE FUNCTION
+estadisticas()
+RETURNS  TABLE (numero_mes integer, cantidad integer) AS $$
+DECLARE
+suma1 integer;
+suma2 integer;
+sumafinal integer;
+BEGIN
+CREATE TABLE datos(mes int, cantidad int);
+SELECT sum(cant_zorzales) INTO suma1 FROM Transferencia Where fecha >= '01 May 2017' and fecha <= '31 May 2017';
+SELECT sum(monto) INTO suma2 FROM transaccion56 Where fecha >= '01 May 2017' and fecha <= '31 May 2017';
+IF suma1 IS NULL THEN 
+	suma1 = 0;
+END IF;
+IF suma2 IS NULL THEN 
+	suma2 = 0;
+END IF;
+sumafinal = suma1+suma2;
+INSERT INTO datos VALUES (1,sumafinal);
+SELECT sum(cant_zorzales) INTO suma1 FROM Transferencia Where fecha >= '01 Jun  2017' and fecha <= '30 Jun  2017' ;
+SELECT sum(monto) INTO suma2 FROM transaccion56 Where fecha >= '01 Jun 2017' and fecha <= '30 Jun  2017';
+IF suma1 IS NULL THEN 
+	suma1 = 0;
+END IF;
+IF suma2 IS NULL THEN 
+	suma2 = 0;
+END IF;
+sumafinal = suma1+suma2;
+INSERT INTO datos VALUES (2,sumafinal);
+SELECT sum(cant_zorzales) INTO suma1 FROM Transferencia Where fecha >= '01 Jul  2017' and fecha <= '31 Jul  2017';
+SELECT sum(monto) INTO suma2 FROM transaccion56 Where fecha >= '01 Jul 2017' and fecha <= '31 Jul  2017';
+IF suma1 IS NULL THEN 
+	suma1 = 0;
+END IF;
+IF suma2 IS NULL THEN 
+	suma2 = 0;
+END IF;
+sumafinal = suma1+suma2;
+INSERT INTO datos VALUES (3,sumafinal);
+SELECT sum(cant_zorzales) INTO suma1 FROM Transferencia Where fecha >= '01 Aug  2017' and fecha <= '31 Aug  2017';
+SELECT sum(monto) INTO suma2 FROM transaccion56 Where fecha >= '01 Aug 2017' and fecha <= '31 Aug  2017';
+IF suma1 IS NULL THEN 
+	suma1 = 0;
+END IF;
+IF suma2 IS NULL THEN 
+	suma2 = 0;
+END IF;
+sumafinal = suma1+suma2;
+INSERT INTO datos VALUES (4,sumafinal);
+SELECT sum(cant_zorzales) INTO suma1 FROM Transferencia Where fecha >= '01 Sep  2017' and fecha <= '30 Sep  2017' ;
+SELECT sum(monto) INTO suma2 FROM transaccion56 Where fecha >= '01 Sep 2017' and fecha <= '30 Sep  2017';
+IF suma1 IS NULL THEN 
+	suma1 = 0;
+END IF;
+IF suma2 IS NULL THEN 
+	suma2 = 0;
+END IF;
+sumafinal = suma1+suma2;
+INSERT INTO datos VALUES (5,sumafinal);
+SELECT sum(cant_zorzales) INTO suma1 FROM Transferencia Where fecha >= '01 Oct  2017' and fecha <= '31 Oct  2017';
+SELECT sum(monto) INTO suma2 FROM transaccion56 Where fecha >= '01 Oct 2017' and fecha <= '31 Oct  2017';
+IF suma1 IS NULL THEN 
+	suma1 = 0;
+END IF;
+IF suma2 IS NULL THEN 
+	suma2 = 0;
+END IF;
+sumafinal = suma1+suma2;
+INSERT INTO datos VALUES (6,sumafinal);
+SELECT sum(cant_zorzales) INTO suma1 FROM Transferencia Where fecha >= '01 Nov  2017' and fecha <= '30 Nov  2017';
+SELECT sum(monto) INTO suma2 FROM transaccion56 Where fecha >= '01 Nov 2017' and fecha <= '30 Nov  2017';
+IF suma1 IS NULL THEN 
+	suma1 = 0;
+END IF;
+IF suma2 IS NULL THEN 
+	suma2 = 0;
+END IF;
+sumafinal = suma1+suma2;
+INSERT INTO datos VALUES (7,sumafinal);
+SELECT sum(cant_zorzales) INTO suma1 FROM Transferencia Where fecha >= '01 Dec  2017' and fecha <= '31 Dec  2017' ;
+SELECT sum(monto) INTO suma2 FROM transaccion56 Where fecha >= '01 Dec 2017' and fecha <= '31 Dec  2017';
+IF suma1 IS NULL THEN 
+	suma1 = 0;
+END IF;
+IF suma2 IS NULL THEN 
+	suma2 = 0;
+END IF;
+sumafinal = suma1+suma2;
+INSERT INTO datos VALUES (8,sumafinal);
+SELECT sum(cant_zorzales) INTO suma1 FROM Transferencia Where fecha >= '01 Jan  2018' and fecha <= '31 Jan  2018';
+SELECT sum(monto) INTO suma2 FROM transaccion56 Where fecha >= '01 Jan 2018' and fecha <= '31 Jan  2018';
+IF suma1 IS NULL THEN 
+	suma1 = 0;
+END IF;
+IF suma2 IS NULL THEN 
+	suma2 = 0;
+END IF;
+sumafinal = suma1+suma2;
+INSERT INTO datos VALUES (9,sumafinal);
+SELECT sum(cant_zorzales) INTO suma1 FROM Transferencia Where fecha >= '01 Feb  2018' and fecha <= '28 Feb  2018' ;
+SELECT sum(monto) INTO suma2 FROM transaccion56 Where fecha >= '01 Feb 2018' and fecha <= '28 Feb  2018';
+IF suma1 IS NULL THEN 
+	suma1 = 0;
+END IF;
+IF suma2 IS NULL THEN 
+	suma2 = 0;
+END IF;
+sumafinal = suma1+suma2;
+INSERT INTO datos VALUES (10,sumafinal);
+SELECT sum(cant_zorzales) INTO suma1 FROM Transferencia Where fecha >= '01 Mar  2018' and fecha <= '31 Mar  2018';
+SELECT sum(monto) INTO suma2 FROM transaccion56 Where fecha >= '01 Mar 2018' and fecha <= '31 Mar  2018';
+IF suma1 IS NULL THEN 
+	suma1 = 0;
+END IF;
+IF suma2 IS NULL THEN 
+	suma2 = 0;
+END IF;
+sumafinal = suma1+suma2;
+INSERT INTO datos VALUES (11,sumafinal);
+SELECT sum(cant_zorzales) INTO suma1 FROM Transferencia Where fecha >= '01 Apr  2018' and fecha <= '30 Apr  2018';
+SELECT sum(monto) INTO suma2 FROM transaccion56 Where fecha >= '01 Apr 2018' and fecha <= '30 Apr  2018';
+IF suma1 IS NULL THEN 
+	suma1 = 0;
+END IF;
+IF suma2 IS NULL THEN 
+	suma2 = 0;
+END IF;
+sumafinal = suma1+suma2;
+INSERT INTO datos VALUES (12,sumafinal);
+RETURN QUERY SELECT * FROM datos;
+DROP TABLE datos;
+RETURN;
+END
+$$ language plpgsql

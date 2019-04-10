@@ -1,0 +1,78 @@
+Coordinación en las Cadenas de Abastecimiento
+
+• Cada agente optimiza su beneficio.
+• Optimizaciones locales dentro de a firma.
+	– Marketing/Ventas.
+	– Producción.
+	– Transporte/Despacho.
+• Son globalmente optimas?
+• Descentralizadas → Ineficiencias→ Solucion.
+• Modelar:
+	– Proveedor.
+	– Comprador.
+	– La cadena completa.
+
+Cadena Descentralizada
+	• Cada agente toma su decisión que maximiza su
+	beneficio.
+	• Secuencia:
+		– Proveedor ofrece un precio w.
+		– Comprador selecciona la cantidad a comprar Q.
+		– Se realizan los beneficios.
+• Mejor respuesta del comprador.
+	– De que depende?
+	– P(w)
+• Función de respuesta.
+• Mejor respuesta del proveedor.
+	– De que depende.
+	– Q(w).
+• Función de respuesta.
+
+Precio proveedor (w) W=(a+c)/2
+Cantidad retailer (q) Q=(a-c)/4b
+Precio mercado (p) P=(3a + c)/4
+Utilidad proveedor (Πs) Πs = (a-c)2/8b
+Utilidad retailer (Πr) Πr = (a-c)2/16b
+Utilidad SC (Π) Πr = 3(a-c)2/16b
+
+CADENA CENTRALIZADA:
+	• Es mejor esta solución?
+	• Que lleva a que esta solución se mejor.
+		– Doble marginalización.
+	• Se puede implementar?
+		– Integrada.
+		– No Integrada.
+			Descentralizada    Centralizada
+Precio proveedor (w)	 W=(a+c)/2		 ?
+Cantidad retailer (q)	 Q=(a-c)/4b	    Q=(a-c)/2b
+Precio mercado (p) 	P=(3a + c)/4 	    P=(a+c)/2
+Utilidad proveedor (Πs) Πs = (a-c)2/8b		 ?
+Utilidad retailer (Πr) Πr = (a-c)2/16b 		?
+Utilidad SC (Π)      Π = 3(a-c)2/16b	   Π = (a-c)2/4b
+
+• Contrato de precio.
+	– Distribuir las utilidades.
+• Contratos tipo:
+	– Tómalo o déjalo.
+	– Precio marginal.
+• Coordinación.
+
+
+• Cual es el objetivo?
+	– Obtener las utilidades lo mas cerca del optimo.
+	– División flexible de las utilidades.
+	– Bajo costo de control y administración.
+	– La “justicia” debe ser parte del criterio.
+• Tipos de contratos:
+	– Tarifa de dos partes (Extraer renta).
+	– Descuentos por cantidad (Incentiva q)
+	– Compartir utilidades (Reduce doble marginalización).
+	– Contratos de retro compra. (Cantidad y comparte riesgo).
+Definiciones:
+SCOR: El modelo Supply Chain Operations Reference model de las siglas SCOR, es un framework de procesos que tiene un uso enfocado a gestionar la cadena de suministro, desde su representación hasta su configuración. En el modelo SCOR lo que se ha tratado es de integrar los procesos de negocio, indicadores, tecnologías al servicio de la cadena de suministro y mejorar la eficacia de la Cadena de Suministro y de las posibles mejoras que se puedan implantar dentro de la misma.
+El SCOR permite desplegar las actividades de negocio para conseguir cubrir la demandad de cliente. Se divide en 5 procesos clave de gestión, Planificación (PLAN), Aprovisionamiento (SOURCE), Fabricación (MAKE), Logística (DELIVER) y Devolución (RETURN). Con ello se busca abarcar todas las interacciones posibles con el cliente (desde su pedido u entrada de orden hasta el pago de la factura), y por otra parte se pretende contemplar a todos los actores del proceso (Proveedores o Suppliers y Clientes o Customers).
+
+SCOR trabaja con 3 niveles de procesos, el primero es el Nivel Superior (Tipos de procesos), el segundo es el Nivel de Configuración (Categorías de procesos) y el tercero y último es el Nivel de Elementos de Procesos (Descomposición de los procesos), en cada uno de ellos SCOR busca de aportar indicadores (KPIs), estos a su vez se dividen en varios factores de rendimiento de sistema, Fiabilidad en el cumplimento (Reliability), Velocidad de atención (Responsieveness), Coste (Cost), Activos (Assets) y Flexibilidad (Fleixibility).
+
+Doble marginalización: cuando tanto el productor como el distribuidor tienen poder de mercado, ambos impondrán un margen lo que hará que el precio se encuentre por encima del óptimo. Las ventas se reducen demasiado debido al alto precio.
+

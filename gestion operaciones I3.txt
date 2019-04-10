@@ -1,0 +1,220 @@
+Gestión de operaciones. I3
+
+Objetivos al construir un centro de distribución:
+	- Paso intermedio entre fábrica y clientes.
+
+¿Que lleva a construir un centro de distribución?
+•Beneficios:
+	- Costo transporte.
+	- Consolidación demanda y risk pooling. ?ejemplo
+        – Costos de almacenamiento.
+	– Costos de adquisición. ?
+	– Entregar servicios.
+	– Servicio al cliente / logística reversa.
+• Costos:
+	– Infraestructura.
+	– Personal.
+• Riesgos
+• Eficiencia
+
+Servicios:
+	• Procesos que agregan valor:
+		– Ensamblaje y postpoment. Ej. Computadores, celulares,
+		electrodomesticos, etc.
+		– Etiquetado y precios. Ej. Vinos.
+		– Kitting. Re empaque para nuevo producto.
+		– Control aduanero. Ej. Productos frescos.
+
+
+
+
+Decisiones a tomar en un CD: 
+• Factores afectan un CD:
+	– Mercado. Área de influencia. Digital → Real.
+	– Clientes. Final → Retail → Fabrica.
+	– Productos. Características.
+	– Velocidad de respuesta. Nivel de servicio, frecuencia, costo.
+• Niveles:
+	– Nivel de externalización: construir/dueño → 3PL(Third Party Logistics).
+	– Localización.Costo vs velocidad de respuesta.
+	– Tamaño.
+	– Características: cross dock → bodega.
+	– Áreas : Reserva →Área pickeo rápido.
+	– Tecnologías: Manejo de Materiales TI: WMS.Clave. Containers, taller, racks,cargadores,Repisa Estática,Flow Racks, Carousel, Sistemas Automatizados,software
+
+• Tamaño del CD:
+	– Costos y ubicación. Análisis punto de equilibrio.
+	– Crecimiento. Costos incrementales y sinergias.
+	– Tendencias del mercado. Clientes.
+• Características:
+	– Tipo: cross dock → Bodega
+• Áreas:
+	– Producto: Control temperatura →ambiente.
+	– Mercado: Reserva → Pick rapido.
+
+Logistica de Bodega:
+• Actividades(Operaciones):
+	Recepción=>Guardar => Bodega => Buscar/Pick => Despacho
+	• Que actividades consumen mas recursos?
+	• Que recursos?
+	• Métricas.
+• Áreas:
+	– Recepción.
+	– Reserva.
+	– Pick rápido:
+		• Pallet/Cajas.
+		• Frontal: Unidades.
+	– Despacho.
+
+Análisis de flujos en CD
+	• Los SKU son como el fluido que pasa por la cañería.
+	• El “ancho” corresponde al tamaño.
+
+Cual es la velocidad.
+• Recordemos la ley de Little: L=λ * W.
+	– L= Cola (Inventario).
+	– W = Espera (Rotación).
+	– λ = Tasa servicio (Proceso).
+• Decisiones; Elementos:
+	– Características del inventario: SKU, tamaños y proveedores.
+	– Características de la demanda: Popularidad,Throughput y
+	flujo.
+• Decisiones:
+	– Forma y distribución de la bodega.
+	-– Tipo de almacenamiento: Dedicado → Compartido.Dedicado (organizado) v/s 		compartido (Caótico)
+	– En que área colocar las SKU: Reserva → Área pick rápido.
+	- Cantidad a colocar en cada área.
+	-Decisiones de personal
+	-Decisiones de tamaño
+
+SKU/Picks(Regla de 80%-20%) ?
+
+
+Layout: Eficiencia Operacional
+	• El objetivo es maximizar el movimiento por persona
+	por hr.
+	• Como mejoramos el movimiento de cada persona?
+		-Distribución en U
+		- Pasillo intermedios
+		-Bodega en Y
+		– Formato del centro
+		– Seleccionando la ubicación de la SKU.
+
+
+Dos bodegas en uno:
+	• Trade-off entre espacio y tiempo.
+	• Se mantiene 2 tipos de bodegas.
+	• Bodega “uno”:
+		– SKU predecibles y populares.
+		– Fácil de planificar.
+		– Eficiencia… eficiencia… eficiencia.
+		– Intensivo en MO.
+	• Bodega “dos”:
+		– Predecible en agregado.
+		– Difícil de planificar.
+		– Consume espacio.
+		– Espacio vs Mano de Obra.
+Dedicado(organizada 1 a 1) Referencia ubicación física
+	• Ubicación reservada.
+	• Necesidad TI: no.
+	• Eficiencia uso espacio: baja.
+	• Aprendizaje: alta.
+	• Errores en asignación: menor.
+	• Errores en pick: menor.
+Compartido(caótico n a n) Referencia ubicación física gráficos?
+	• Ubicación asignando por
+	WMS
+	• Necesidad TI: SI.
+	• Eficiencia uso espacio: Mayor.
+	• Aprendizaje: baja.
+	• Errores en asignación: mayor.
+	• Errores en pick: mayor.
+
+Eficiencia uso espacio
+	• Cuando una SKU se almacena en espacio compartido en k
+	lugares de igual tamaño, la eficiencia del uso del espacio es:
+	𝑒𝑓 =
+		𝑘/𝑘 + 1
+
+	• Aumentar de 1 lugar a 2 lugares compartidos. La eficiencia
+	sube de 50% a 66%.
+	• Aumentar la división de las SKU aumenta la eficiencia, pero
+	aumenta el costo de gestión.
+	• Buscar optimizar.
+
+PICK FRONTAL
+
+	• Las áreas de pickeo frontal tienen una asignación de
+	espacio reservado. Se asigna un SKU especifico.
+	• Selección de la SKU y cantidad que va a ir en esta
+	área.
+		– Costos.
+		– Ahorros.
+	• Beneficios totales.
+
+
+
+Definiciones
+	• Costos:
+		– Pick en el área de reserva.
+		– Pick en el área de cajas.
+		– Reaprovisionamiento de pallets.
+	• Cantidad mínima a colocar en parte de pick de cajas.
+		– Dada por las frecuencias/costos de reaprovisionamiento.
+	• Cantidad máxima.
+	• Picks de pallets completos.
+	• SKU de alta rotación.
+
+
+
+Costos vs Beneficios
+	• El ir a la zona de reserva me toma un cierto tiempo vs ir al área de pick de 		cajas. Beneficio. Depende del numero de picks por pallets.
+		– Que cantidad coloco en la zona.
+	• Tengo un costo de reabastecer el área de cajas.
+		Costo. Depende del numero de pallets que debo mover.
+	• Tengo la opción de colocar todo en la zona de picks de cajas y ahorro el 		reabastecimiento.
+
+Modelo de ahorros:
+	ECUACIONES
+• Otros mecanismos:
+	– Igual espacio.
+	– Igual tiempo.
+• Uso de sistemas automatizados. Aumentar la
+eficiencia de picks.
+	– Situación en Chile.
+• Tendencias y tecnologías:
+	– Pick to voice.
+	– Ruteo optimo en bodega.
+	– Optimización del packing.
+	– Sistemas cloud y SAAS.
+	– Mayor cantidad de actividades. Customizacion y postpoment.
+• Aspectos medioambientales y huella de carbono.
+• EL CD como fuente de ventaja competitiva. Tiempo.
+Definiciones:
+
+Logística bodegas: La logística de bodegas implica el diseño de instalaciones y manejo de materiales para la fabricación, distribución y servicio de las instalaciones. Los temas de investigación incluyen el diseño y los aspectos operativos de la materia y el flujo de información dentro de las instalaciones para mejorar la productividad y el rendimiento. Los temas específicos incluyen la distribución de las instalaciones, manejo de materiales, sistemas de almacenamiento / recuperación, llenado de pedidos, el despliegue de sensores y de seguimiento de inventario y control, entre otros.
+	
+Risk pooling: La Distribución de Riesgos es un método a menudo asociado con la gestión de riesgos de inventarios. Los fabricantes y minoristas que experimentan una alta variabilidad de la demanda en sus productos, pueden agrupar (pool) inventario de componentes comunes que están asociados a amplias familias de productos, con el objetivo de amortiguar el costo general de tener que contar con inventario para cada tipo de producto. De esta forma se distribuyen los costos y riesgos de una manera controlable.
+*EJEMPLO RISK POOLING
+
+
+La Logística Reversa: gestiona el retorno de las mercancías en la cadena de suministro, de la forma más efectiva y económica posible, se encarga de la recuperación y reciclaje de envases, embalajes y residuos peligrosos; así como de los procesos de retorno de excesos de inventario, devoluciones de clientes, productos obsoletos e inventarios estaciónales, incluso se adelanta al fin de vida útil del producto, con objeto de darle salida en mercados de mayor rotación.
+
+3PL: 3PL significa “Third Party Logistics”, en español “Logística de terceros” o “Logística tercerizada”, es decir, la externalización u outsourcing de la logística a un operador externo.
+Típicamente, un operador 3PL proporciona servicios de transporte y almacenaje a un fabricante, como actor intermedio entre éste y sus clientes. Pero el operador 3PL no es propietario de los bienes que almacena y distribuye. De cara al cliente final, no hay diferencia entre un operador 3PL y el fabricante gestionando su propia logística, puesto que los pedidos y facturas son administrados en última instancia por el propio fabricante. Un operador 3PL es un proveedor de funciones logísticas que permite optimizar parte de la gestión de la cadena de suministro del fabricante, el cual quedará liberado de tener que disponer de su propia flota de vehículos y de sus propios almacenes.
+
+Sinergia: La sinergia, comúnmente, refleja un fenómeno por el cual actúan en conjunto varios factores, contrariamente o varias influencias, observándose así un efecto, además del que hubiera podido esperarse operando independientemente, dado por la concausalidad,1​ a los efectos en cada uno. En estas situaciones, se crea un efecto extra debido a la acción conjunta o solapada, que ninguno de los sistemas hubiera podido generar en caso de accionar aisladamente.
+En el lenguaje corriente, el término tiene una connotación positiva, y es utilizado para señalar un resultado más favorable, cuando varios elementos de un sistema o de una "organización" actúan concertadamente. Se entiende que hay sinergia positiva cuando "el resultado es superior a la suma de los resultados de cada elemento o de cada parte actuando aisladamente", esto se resume de manera muy simple con el aforismo: "uno y uno hacen tres".
+
+Cross docking: El Cross Docking es una estrategia logística dónde productos son descargados desde un elemento de llegada (camión, vagón de tren) e inmediatamente movidos hacia un elemento de transporte de carga (generalmente un camión) con un tiempo mínimo de almacenamiento y manipulación.
+En Logística el Cross-docking1​ corresponde a un tipo de preparación de pedido (una de las funciones del almacén logístico) sin colocación de mercancía en stock (inventario), ni operación de picking (recolección). Permite transitar materiales con diferentes destinos o consolidar mercancías provenientes de diferentes orígenes que puede variar dependiendo la necesidades del producto .
+En sentido estricto el cross-docking se hace sin ningún tipo de almacenaje intermedio. Evitar las operaciones de almacenamiento permite reducir el plazo necesario a las operaciones logísticas. Es porque este sistema es utilizado especialmente, para los productos frescos o la prensa, por grandes distibuidores, (Centro Distribución Paris, Grupo Almacenes Éxito, Servientrega, Redetrans, Deprisa, Carrefour, Cecofar, Grupo Eroski, Centro Cuesta Nacional, Celsur Logística Profesional, Jumbo Retail, Fruvemex, Transfarmaco, Transportes Furlong, Walmart) entre otros.
+
+
+Picking:  Este término anglosajón, en el mundo de la gestión de proyectos logísticos hace referencia a la tarea de recoger unidades de uno o varios artículos, almacenados en distintas ubicaciones, que deben destinarse a la preparación de uno varios pedidos, lo que conocemos como sistema de almacenaje.
+Su principal característica es su intensidad en mano de obra, que configuran esta actividad como uno de los puntos críticos a la hora de mantener ciertos niveles de productividad en la cadena de suministro. Las empresas que emplean este método de preparación de pedidos, más que preguntarse qué es picking, se cuestionan los métodos que pueden aplicarse para mecanizar o automatizar partes del proceso, en aras de una optimización del rendimiento.
+En el campo de la logística, picking o preparación de pedidos1​ es el proceso de recogida de material extrayendo unidades o conjuntos empaquetados de una unidad de empaquetado superior que contiene más unidades que las extraídas.2​ En general, el proceso en el que se recoge material abriendo una unidad de empaquetado.
+Puede ser un picking de unidades cuando se extraen productos unitarios de una caja o un picking de cajas cuando se recogen cajas de una paleta o de un contenedor también llamado packing.
+El picking es un proceso básico en la preparación de pedidos en los almacenes que afecta en gran medida a la productividad de toda la cadena logística, ya que, en muchos casos, es el cuello de botella de la misma.
+
+WMS: Sistema de gestión de almacenes (WMS) Un sistema de gestión de almacenes (WMS) es una aplicación de software que da soporte a las operaciones diarias de un almacén. Los programas WMS permiten la gestión centralizada de tareas, como el seguimiento de los niveles de inventario y la ubicación de existencias.
